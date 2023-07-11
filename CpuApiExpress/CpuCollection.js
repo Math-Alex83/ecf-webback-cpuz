@@ -1,4 +1,5 @@
 // import du module FileSystem (permet de manipuler les fichiers locaux)
+const { append } = require('express/lib/response');
 const fs = require('fs');
 
 class CpuCollection
@@ -20,11 +21,18 @@ class CpuCollection
      */
     findCpuById(_id)
     {
-        let cpu = {};
+        if(this.data.find(i => i._id === '_id')){
+
+            return app.get();
+            
+        }
+        else{
+            let cpu = {};
+        }
 
         // implémenter ici la recherche d'un CPU par son identifiant
 
-        return cpu;
+        //return cpu;
     }
 
     addCpu(_newCpu)
